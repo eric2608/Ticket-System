@@ -5,10 +5,6 @@ import java.util.LinkedList;
 import java.util.Stack;
 import java.util.Scanner;
 
-/**
- *
- * @author 13059
- */
 public class SupportDesk {
        Queue<Ticket> unsolvedTickets = new LinkedList<>();
        Stack<Ticket> solvedIssues = new Stack<>();
@@ -21,7 +17,6 @@ public class SupportDesk {
            • viewRecentResolved() → shows the top 3 most recently resolved tickets (if available).
            • reopenLastResolved() → pops a ticket from the stack and puts it back into the queue
        */
-       
        
        public void addTicket(Ticket ticket){
        
@@ -46,7 +41,6 @@ public class SupportDesk {
              return new Ticket(id,name,issue);
        }
        
-       
        public void processNextTicket(){
               
             Ticket next = unsolvedTickets.poll(); 
@@ -56,7 +50,6 @@ public class SupportDesk {
            
        }
        
-     
        public void viewAllActiveTickets() {
               if (unsolvedTickets.isEmpty()) {
                   System.out.println(" No active tickets.");
@@ -70,7 +63,6 @@ public class SupportDesk {
             System.out.println("----------------------------");
         }
     }
-        
         
           public void reopenLastResolve(){
               
@@ -86,8 +78,6 @@ public class SupportDesk {
                 System.out.println("---------"+solvedIssues.pop()+" --------");
        }
 
-
-
        public void viewRecentResolved() {
         if (solvedIssues.isEmpty()) {
             System.out.println("No resolved tickets yet.");
@@ -100,8 +90,6 @@ public class SupportDesk {
             System.out.println("#" + (i + 1) + " (most recent): " + t.name + " | " + t.issue + " | priority " + t.priority);
         }
         }
-       
-       
        
       public void printTickets(){
       
