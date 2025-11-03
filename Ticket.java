@@ -1,22 +1,15 @@
 public class Ticket {
 
-
-    
     int id;
     String name;
     String issue;
     String priority;
-    
-    
+        
     public Ticket(int id, String name, String issue) {
         this.id = id;
         this.name = name;
         this.issue = issue;
     }
-
- 
-    
-    
     
     @Override
     public String toString() {
@@ -54,6 +47,5 @@ public class Ticket {
     public void setPriority(String priority) {
         this.priority = priority;
     }
-              
-  
+               
 }
