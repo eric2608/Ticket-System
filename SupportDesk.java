@@ -65,7 +65,7 @@ public class SupportDesk {
               
              
              
-             return new Ticket(id,name,issue);
+             return new Ticket(id,name,issue,priority);
        }
        
        public void processNextTicket(){
