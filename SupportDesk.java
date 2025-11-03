@@ -85,6 +85,21 @@ public class SupportDesk {
        public void pop(){
                 System.out.println("---------"+solvedIssues.pop()+" --------");
        }
+
+
+
+       public void viewRecentResolved() {
+        if (solvedIssues.isEmpty()) {
+            System.out.println("No resolved tickets yet.");
+            return;
+        }
+        int count = Math.min(3, solvedIssues.size());
+              
+        for (int i = 0; i < count; i++) {
+            Ticket t = solvedIssues.get(solvedIssues.size() - 1 - i);
+            System.out.println("#" + (i + 1) + " (most recent): " + t.name + " | " + t.issue + " | priority " + t.priority);
+        }
+        }
        
        
        
