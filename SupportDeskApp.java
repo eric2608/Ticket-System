@@ -36,6 +36,14 @@ public class SupportDeskApp {
                   5. Reopen last resolved ticket
                   6. Exit
         */
+            System.out.println("1. Add new support ticket");
+            System.out.println("2. Process next ticket");
+            System.out.println("3. View all active tickets");
+            System.out.println("4. View recently resolved tickets");
+            System.out.println("5. Reopen last resolved ticket");
+            System.out.println("6. Exit");
+            System.out.println("Enter selection");
+        }
         
         switch (userSelection){
             case 1 ->ticketmanagement.addTicket(ticketmanagement.getTicket());
