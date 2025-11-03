@@ -42,12 +42,28 @@ public class SupportDesk {
              var id =idGenerator++;
              String name;
              String issue;
-            
+             String priority;
+             int choice = 0;
+              
              System.out.println("Insert the name");
              name = scanner.next();
              
              System.out.println("Insert the issue ");
              issue = scanner.next();
+
+             System.out.println("Insert 1 for high priority , 2 for medium , 3 for low priority"); 
+             while(choice != 1 || choice !=2 || choice != 3){
+                 choice = Scanner.nextInt();
+             }
+             if (choice == 1){
+                    priority = "High";
+             }else if( priority ==2){
+                    priority == "Medium";
+             }else{
+                    priority =="Low";
+             }
+              
+             
              
              return new Ticket(id,name,issue);
        }
