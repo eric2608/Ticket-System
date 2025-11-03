@@ -41,7 +41,7 @@ public class SupportDeskApp {
             case 1 ->ticketmanagement.addTicket(ticketmanagement.getTicket());
             case 2 -> ticketmanagement.processNextTicket();
             case 3 -> ticketmanagement.printTickets();
-            case 4 -> ticketmanagement.reopenLastResolve();
+            case 4 -> ticketmanagement.recentlySolved();
             case 5 ->ticketmanagement.reopenLastResolve() ;
             case 6 ->{ System.out.println("Exiting....");
             break OUTER_LOOP;
