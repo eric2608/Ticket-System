@@ -46,11 +46,8 @@ public class SupportDesk {
              System.out.println("Insert the name");
              name = scanner.next();
              
-             
              System.out.println("Insert the issue ");
              issue = scanner.next();
-             
-             
              
              return new Ticket(id,name,issue);
        }
@@ -58,10 +55,8 @@ public class SupportDesk {
        public void processNextTicket(){
               
             Ticket next = unsolvedTickets.poll(); 
-   
              solvedIssues.push(next);
-       
-           
+
        }
        
        public void viewAllActiveTickets() {
@@ -69,6 +64,7 @@ public class SupportDesk {
                   System.out.println(" No active tickets.");
              return;
           }
+              
         for (Ticket ticket : unsolvedTickets) {
             System.out.println("--------- " + ticket.name + " --------");
             System.out.println("ID:"+ticket.id+"--------");
@@ -76,14 +72,12 @@ public class SupportDesk {
             System.out.println("Priority: " + ticket.priority);
             System.out.println("----------------------------");
         }
+              
     }
         
-          public void reopenLastResolve(){
-              
+          public void reopenLastResolve() {
             Ticket peek = solvedIssues.peek(); 
-   
              unsolvedTickets.add(peek);
-       
              solvedIssues.removeElementAt(0);
            
        }
