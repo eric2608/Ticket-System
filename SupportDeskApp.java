@@ -1,15 +1,8 @@
 package ticket.system;
 import java.util.Scanner;
 
-/**
- *
- * @author 13059
- */
 public class SupportDeskApp {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int userSelection ;
@@ -19,14 +12,11 @@ public class SupportDeskApp {
         System.out.println("This is a modern interface for ticket management");
         
         SupportDesk ticketmanagement = new SupportDesk();
-
-       
         
         OUTER_LOOP:
         while(true){  
         
         userSelection = scanner.nextInt();
-        
         
         /*
                   1. Add new support ticket 
@@ -36,6 +26,7 @@ public class SupportDeskApp {
                   5. Reopen last resolved ticket
                   6. Exit
         */
+            
             System.out.println("1. Add new support ticket");
             System.out.println("2. Process next ticket");
             System.out.println("3. View all active tickets");
@@ -57,12 +48,9 @@ public class SupportDeskApp {
             
             default -> System.out.print("Unknown Selection");
             
-                
-        
         }
         
        }
         
     }
-    
 }
